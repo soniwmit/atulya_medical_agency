@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --med-blue: #0D47A1;
+  --med-green: #0A8F6A;
+  --med-gray: #64748B;
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  .dark .glass-card {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+  }
+
+  .geometric-accent {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  .service-card {
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+    border-left: 4px solid var(--med-green);
+  }
+
+  .dark .service-card {
+    background: #1e293b;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+    border-left: 4px solid var(--med-green);
+  }
+
+  .category-pill {
+    background: white;
+    border: 1px solid #E2E8F0;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+
+  .dark .category-pill {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #F8FAFC;
+}
+
+.dark body {
+  background-color: #0f172a;
+}

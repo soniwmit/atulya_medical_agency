@@ -1,0 +1,6 @@
+{
+  "name": "Atulya Medical Agency",
+  "description": "Your Trusted Medical Store for Genuine Medicines & Healthcare Needs in Paliganj, Bihar 801110",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
