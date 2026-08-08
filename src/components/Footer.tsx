@@ -133,14 +133,7 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
             © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. | Developed by{' '}
-            <a
-              href="https://main.webmakerit.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#0A8F6A] dark:text-emerald-400 hover:underline font-bold"
-            >
-              WMIT
-            </a>
+           <a href="#" className="wmit-popup-trigger hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">Developed by WMIT</a>
           </p>
 
           <div className="flex items-center gap-4 flex-wrap">
