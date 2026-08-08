@@ -66,7 +66,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ activePage }) => {
     const pharmacySchema = {
       "@context": "https://schema.org",
       "@type": "Pharmacy",
-      "@id": "https://atulyamedical.com/#pharmacy",
+      "@id": "https://atulya-medical-agency.vercel.app/#pharmacy",
       "name": BUSINESS_INFO.name,
       "description": BUSINESS_INFO.tagline,
       "image": "/src/assets/images/pharmacy_storefront_1785395981063.jpg",
@@ -133,16 +133,25 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ activePage }) => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://atulyamedical.com/"
+          "item": "https://atulya-medical-agency.vercel.app/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": activePage.toUpperCase(),
-          "item": `https://atulyamedical.com/${activePage}`
+          "item": `https://atulya-medical-agency.vercel.app/#${activePage}`
         }
       ]
     };
+
+    // Canonical Link
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', `https://atulya-medical-agency.vercel.app/${activePage === 'home' ? '' : '#' + activePage}`);
 
     // Inject or update Script tags for Schemas
     let schemaScript = document.getElementById('jsonld-schema');

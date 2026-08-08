@@ -82,6 +82,11 @@ export const SEOInspectorModal: React.FC<SEOInspectorModalProps> = ({ isOpen, on
           </div>
 
           <div className="p-3 bg-slate-800/80 rounded-xl border border-slate-700/80 space-y-1">
+            <p className="font-bold text-emerald-400">XML Sitemap & Search Indexing:</p>
+            <p className="text-slate-300 font-mono text-[11px] select-all">https://atulya-medical-agency.vercel.app/sitemap.xml</p>
+          </div>
+
+          <div className="p-3 bg-slate-800/80 rounded-xl border border-slate-700/80 space-y-1">
             <p className="font-bold text-emerald-400">Open Graph & Twitter Cards:</p>
             <p className="text-slate-300">og:type = "pharmacy", og:locality = "Paliganj", og:region = "Bihar"</p>
           </div>
