@@ -132,7 +132,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Bar & SEO Markup Trigger */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. | Developed by{' '}
+            © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. |{' '}
            <a href="#" className="wmit-popup-trigger hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">Developed by WMIT</a>
           </p>
 
